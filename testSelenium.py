@@ -5,10 +5,14 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.common.by import By
 
 def outputSource(text):
-    path = "test.txt"
-    f = open(path, 'w')
-    f.write(text)
-    f.close()
+    f = open("D:\\python\\test.html", 'w', encoding='UTF-8')
+    try:
+        f.write(text)
+    except Exception as e:
+        print(e)
+    finally:
+        f.close()
+
 
 
 def test():
@@ -28,4 +32,5 @@ def test():
 
 if __name__ == '__main__':
     test()
+    print("END")
     
